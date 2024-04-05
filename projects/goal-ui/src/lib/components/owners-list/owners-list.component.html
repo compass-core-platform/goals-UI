@@ -1,0 +1,26 @@
+<section class="container ui">
+    <header class="owners-ui-section__header">
+        <div class="owners-ui-section__title">Owner</div>
+        <div class="owners-ui-section__header-filter">
+           <div class="owners-ui-section__search-box">
+               <mat-icon>search</mat-icon>
+               <input [(ngModel)]="search" (keyup.enter)="searchQuery()" (blur)="searchQuery()" placeholder="Search owner" appearance="outline">
+           </div>
+           <div class="owners-ui-section__header-actions">
+               <div class="owners-ui-section__button">
+                   <button class="owners-ui-section__create">New Owner</button>
+               </div>
+           </div>
+        </div>
+    </header>
+    <div class="owners-ui-section__content">
+        <mat-tab-group (selectedIndexChange)="tabChanged($event)">
+            <mat-tab label="Individual List">
+                <lib-table-content [tableData]="ownersData"></lib-table-content>
+            </mat-tab>
+            <mat-tab label="Group List">
+                <lib-owners-group></lib-owners-group>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</section>

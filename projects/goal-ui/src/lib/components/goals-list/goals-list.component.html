@@ -1,0 +1,29 @@
+<section class="container ui">
+    <header class="goals-ui-section__header">
+        <div class="goals-ui-section__title">Goal</div>
+        <div class="goals-ui-section__header-filter">
+           <div class="goals-ui-section__search-box">
+               <mat-icon>search</mat-icon>
+               <input [(ngModel)]="search" (keyup.enter)="searchQuery()" (blur)="searchQuery()" placeholder="Search course" appearance="outline">
+           </div>
+           <div class="goals-ui-section__header-actions">
+               <div class="goals-ui-section__dropdown">
+                   <button class="goals-ui-section__dropdown-btn" (click)="toggleDropdown()">Filter by
+                       <span class="goals-ui-section__dropdown-icon" [ngClass]="{'open': isDropdownOpen}"></span>
+                   </button>
+                   <div class="goals-ui-section__dropdown-content" [ngClass]="{'show': isDropdownOpen}">
+                       <a href="#">Item 1</a>
+                       <a href="#">Item 2</a>
+                       <a href="#">Item 3</a>
+                   </div>
+               </div>
+               <div class="goals-ui-section__button">
+                   <button class="goals-ui-section__create">Create New</button>
+               </div>
+           </div>
+        </div>
+    </header>
+    <div>
+        <lib-table-content [tableData]="goalsData"></lib-table-content>
+    </div>
+</section>

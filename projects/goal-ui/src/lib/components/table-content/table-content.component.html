@@ -1,0 +1,42 @@
+<div class="table-content">
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let key of header">{{ key }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container >
+                <tr *ngFor="let row of tableData.slice(1)">
+                    <ng-container *ngFor="let key of keys">
+                        <!-- <td *ngIf="key === 'name'">Pavan</td>
+                        <td>{{ row[key] }}</td> -->
+
+                        <ng-container [ngSwitch]="key">
+                            <td *ngSwitchCase="'name'">
+                                <div class="owner-name">
+                                    <span class="owner-name__capitals">{{getInitials(row[key])}}</span>
+                                    <span>{{row[key]}}</span>
+                                </div>
+                            </td>
+                            <td *ngSwitchCase="'progress'">
+                                <div class="goal-progress">
+                                    <mat-progress-bar mode="determinate" value={{row[key]}}></mat-progress-bar>
+                                    <span>{{row[key]}}%</span>
+                                </div>
+                            </td>
+                            <td *ngSwitchCase="'members'">
+                                <div class="rounded-names">
+                                    <span *ngFor="let name of row[key].slice(0, 4); let i = index" class="rounded-name">{{ getInitials(name) }}</span>
+                                    <span *ngIf="row[key].length > 4" class="extra-names">+{{ row[key].length - 4 }}</span>
+                                </div>
+                            </td>
+                            <td *ngSwitchDefault>{{row[key]}}</td>
+                        </ng-container>
+                    </ng-container>
+                    <!-- <td *ngFor="let key of keys">{{ row[key] }}</td> -->
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

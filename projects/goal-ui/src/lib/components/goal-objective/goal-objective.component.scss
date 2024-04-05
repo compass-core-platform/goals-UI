@@ -1,0 +1,269 @@
+
+
+.goals-objective {
+    display: flex;
+    padding: 20px 20px 0 0;
+    &-sidebar {
+        background: #E2EEFB;
+        width: 20%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-end;
+        a {
+            padding: 10px 20px;
+            width: 180px;
+            display: inline-flex;
+            align-items: center;
+            height: 48px;
+            font-size: 14px;
+            text-decoration: none;
+    
+            &.active {
+                background: rgba(0, 0, 0, 0.04);
+                position: relative;
+                height: 48px;
+    
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 48px;
+                    border-left: 4px solid rgb(35, 134, 252);
+                }
+            }
+        }
+    
+    }
+    &-content {
+        width: 80%;
+        padding: 40px;
+    }
+    .goals-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 10px;
+        &-header {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background-color: white;
+            border-bottom: none;
+        }
+        &-content {
+            textarea {
+                width: 100%;
+                height: 100px;
+                border: 1px solid #ccc;
+                padding: 5px;
+                resize: vertical;
+            }
+        }
+        &-actions {
+            margin-top: 10px;
+            text-align: right;
+            .next-button {
+                background-color: blue;
+                color: white;
+                border-radius: 0;
+                border: 1px solid blue;
+                padding: 10px;
+                margin-left: 5px;
+            }
+            .cancel-button {
+                background-color: white;
+                color: black;
+                border-radius: 0;
+                border: 1px solid blue;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+// .goals-objective-content {
+//     width: 80%;
+//     padding: 40px;
+// }
+
+// .goals-card {
+//     border: 1px solid #ccc;
+//     // border-radius: 5px;
+//     padding: 20px;
+//     margin: 10px;
+// }
+
+// .goals-card-header {
+//     font-size: 1.2em;
+//     font-weight: bold;
+//     margin-bottom: 10px;
+//     background-color: white;
+//     border-bottom: none;
+// }
+
+// .goals-card-content textarea {
+//     width: 100%;
+//     height: 100px;
+//     border: 1px solid #ccc;
+//     // border-radius: 5px;
+//     padding: 5px;
+//     resize: vertical;
+// }
+
+// .goals-card-actions {
+//     margin-top: 10px;
+//     text-align: right;
+// }
+
+// .goals-card-actions{
+//     .next-button {
+//         background-color: blue;
+//         color: white;
+//         border-radius: 0;
+//         border: 1px solid blue;
+//         padding: 10px;
+//         margin-left: 5px;
+//     }
+//     .cancel-button {
+//         background-color: white;
+//         color: black;
+//         border-radius: 0;
+//         border: 1px solid blue;
+//         padding: 10px;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .goals-objective-parent {
+//     .mt-64 {
+//         margin-top: 64px;
+//     }
+//     .left-content>p {
+//         font-size: 18px;
+//     }
+//     div>img {
+//         width: 100%;
+//         margin-bottom: 40px;
+//     }
+//     div>p, ul>li {
+//         line-height: 1.5rem;
+//     }
+//     div>h2 {
+//         margin-bottom: 0.5rem !important;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .sidenav-container {
+//     .mat-drawer {
+//         padding:20px 0;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: left;
+//         background: rgb(35, 134, 252, 0.1);
+//         a {
+//             margin-left: 60px;
+//         }
+//         .mat-button {
+//             color:rgba(0, 0, 0, 0.87);
+//             display: block;
+//             text-align: left;
+//             font-weight: 400;
+//             opacity: 1;
+//             padding:14px 20px;
+//             border-radius: 0;
+//             &.active{
+//                 border-left:3px solid var(--com-primary-color);
+//                 background-color: rgba(0,0,0, 0.04);
+//                 opacity: 1;
+//                 color: rgba(0, 0, 0, 0.87);
+//                 font-family: "Lato-Bold";
+//                 font-size: 14px;
+//                 font-weight: 700;
+//                 font-style: Bold;
+//                 letter-spacing: 0.25px;
+//                 text-align: left;
+//                 line-height: 20px;
+//             }
+//             span {
+//                 font-size: 14px;
+//             }
+//             &:hover{
+//                 color:var(--com-primary-hover);
+//                 text-decoration: none;
+//             }
+//         }
+//         &-content {
+//              min-height: 100vh;
+//         }
+//     }
+// }
+// ::ng-deep .sidenav-container .mat-drawer-backdrop.mat-drawer-shown {
+//     background-color: #ffffff;
+// }
+
+// ::ng-deep .sidenav-container .category-header-items h4 {
+//     white-space: nowrap !important;
+// }
+
+// .text-right {
+//     float: right;
+//     text-align: right;
+// }
+// .mr-2 {
+//     margin-right: 1rem;
+// }
+
+
+
+

@@ -1,0 +1,18 @@
+<div class="group-container">
+    <ng-container *ngFor="let group of groups">
+        <div class="group-container__content">
+            <div class="group-container__batch">
+                <div>{{group.name}}</div>
+                <div>{{group.membersCount}} members</div>
+                <div>{{group.createdOn}}</div>
+            </div>
+            <div class="group-container__members">
+                <ng-container *ngIf="group['members'].length>0">
+                    <span *ngFor="let name of group['members'].slice(0, 4); let i = index" class="group-container__rounded-name">{{ getInitials(name) }}</span>
+                    <span *ngIf="group['members'].length > 4" class="group-container__extra-names">+{{ group['members'].length - 4 }}</span>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
+</div>
+  

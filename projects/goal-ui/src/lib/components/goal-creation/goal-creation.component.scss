@@ -1,0 +1,80 @@
+// .goal-creation-parent {
+//     .owner-tab-parent {
+//         margin-top: 64px;
+//     }
+//     label {
+//         font-size: 18px;
+//     }
+//     .input-field>input {
+//         height: 40px;
+//         width: 20%;
+//     }
+// }
+
+// .goals-objective-parent {
+//     display: flex;
+//     .goals-objective-left, .goals-objective-right {
+//         flex: 1;
+//         padding: 1rem;
+//     }
+//     .mt-48 {
+//         margin-top: 3rem;
+//     }
+//     .left-content>p {
+//         font-size: 18px;
+//     }
+//     div>img {
+//         width: 100%;
+//         margin-bottom: 40px;
+//     }
+//     div>p, ul>li {
+//         line-height: 1.5rem;
+//         font-size: 16px;
+//         letter-spacing: 1px;
+//     }
+//     div>h2 {
+//         margin-bottom: 0.5rem !important;
+//     }
+//     .start-button {
+//         background-color: black;
+//         color: white;
+//         border-radius: 0;
+//         border: none;
+//         padding: 10px;
+//     }
+//     video {
+//         width: 50%;
+//     }
+// }
+
+@import '../../../../../../src/styles';
+
+.goals-ui {
+    &__wrapper{
+        position: relative;
+        background: rgb(240, 243, 244);
+        min-height: 100vh;
+        padding: calculateRem(15);
+    }
+    &__header{
+        background: var(--white-color);
+        display: flex;
+        justify-content: space-between;
+    }
+    &__label{
+        display: inline-flex;
+        padding: calculateRem(12) calculateRem(20);
+        color: var(--black-color);
+        &.active{
+            background: var(--black-color);
+            font-weight: 600;
+            border-bottom: dynamic-border(calculateRem(2),var(--primary-color));
+        }
+    }
+
+    &__search {
+       ::ng-deep .mat-form-field-label{
+            padding:3px 20px;
+        }
+    }
+}

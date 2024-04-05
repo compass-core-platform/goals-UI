@@ -1,0 +1,114 @@
+.goals-ui {
+    &-section {
+        &__header-filter {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__title {
+            opacity: 1;
+            color: rgba(0, 0, 0, 0.87);
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.12px;
+            text-align: left;
+            line-height: 28px;
+            margin: 30px 0px;
+        }
+        &__search-box {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            background: #ffffff;
+            width: 30%;
+        }
+    
+        &__search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        &__header-actions {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        &__dropdown-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            height: 100%;
+            width: 130px;
+        }
+
+        &__dropdown-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid black;
+            transition: transform 0.3s;
+        }
+        
+        &__dropdown-btn.open &__dropdown-icon {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        
+        &__dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 130px;
+        }
+        
+        &__dropdown-content.show {
+            display: block;
+        }
+        
+        &__dropdown-content a {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        &__dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        &__create {
+            background-color: #0154D2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 2rem;
+        }
+        
+        &__create:hover {
+            background-color: darkblue;
+        }
+        
+    }
+
+}

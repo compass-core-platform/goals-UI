@@ -1,0 +1,64 @@
+.owners-ui {
+    &-section {
+        &__header-filter {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__title {
+            opacity: 1;
+            color: rgba(0, 0, 0, 0.87);
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.12px;
+            text-align: left;
+            line-height: 28px;
+            margin: 30px 0px;
+        }
+        &__search-box {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            background: #ffffff;
+            width: 30%;
+        }
+    
+        &__search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        &__header-actions {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__create {
+            background-color: #0154D2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 2rem;
+        }
+        
+        &__create:hover {
+            background-color: darkblue;
+        }
+
+        &__content {
+            margin-top: 16px;
+            background: white;
+            width: 100%;
+            padding: 20px;
+        }
+        
+    }
+
+}

@@ -1,0 +1,81 @@
+<!-- <div class="row mx-0 goals-objective-parent">
+    <div class="col-6 mt-64">
+        <div>
+            <img src="assets/goals-ui.png" alt="Goals objective and key results">
+        </div>
+        <div class="left-content">
+            <p>Create your first Objective and Key Results to experience the power of OKRs!</p>
+            <button class="btn btn-dark rounded-0" (click)="start()">Lets Start</button>
+        </div>
+    </div>
+    <div class="col-6 mt-2">
+        <div>
+
+        </div>
+        <div>
+            <h2>What are OKRs?</h2>
+            <p>OKRs are a powerful goal setting framework that helps individuals and teams set clear objectives  and measure their progress. Objective define what you want to achieve, and key results are the specific, measurable outcomes that track your success.</p>
+        </div>
+        <br><br>
+        <div>
+            <h2>How to use OKRs:</h2>
+            <ul>
+                <li><b>Set Objectives: </b>Define your big goals. What do you want to accomplish?</li>
+                <li><b>Create Key Results: </b>Specify how you'll measure progress toward each objective.</li>
+                <li><b>Track Progress: </b>Regularly update your key results to see how you're doing.</li>
+                <li><b>Achieve Success: </b>Reach your objectives and celebrate your achievements!</li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+<!-- <mat-drawer-container class="sidenav-container">
+    <mat-drawer #sidenav mode="side" opened="true">
+        <a mat-button color="primary" [routerLink]="['goals']" class="active">Goals</a>
+        <a mat-button color="primary">Owners</a>
+    </mat-drawer>
+    <mat-drawer-content class="side-content">
+        <div class="ui container">
+            <div class="card mt-3">
+                <div class="card-header">
+                    Card Header
+                </div>
+                <div class="card-body">
+                    <textarea class="form-control" rows="3" #objectiveinput (input)="checkObjective(objectiveinput.value)"></textarea>
+                    <div class="text-right mt-2">
+                        <button class="btn btn-secondary mr-2">Cancel</button>
+                        <button class="btn btn-primary" [disabled]="isDisabled">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container> -->
+
+<div class="goals-objective">
+    <div class="goals-objective-sidebar">
+        <a href="#" class="" (click)="selectTab('goals')" [class.active]="selectedTab === 'goals'">Goals</a>
+        <a href="#" class="" (click)="selectTab('owners')" [class.active]="selectedTab === 'owners'">Owners</a>
+    </div>
+    <div class="goals-objective-content">
+        <ng-container  >
+            <div class="tab-content">
+                <div class="goals-card">
+                    <div class="goals-card-header">Objectives</div>
+                    <div class="goals-card-content">
+                      <textarea placeholder="Enter text" [(ngModel)]="text"></textarea>
+                    </div>
+                    <div class="goals-card-actions">
+                      <button class="cancel-button" (click)="onCancel()">Cancel</button>
+                      <button class="next-button" (click)="onNext()">Next</button>
+                    </div>
+                  </div>                  
+            </div>
+        </ng-container>
+        <ng-container *ngIf="selectedTab === 'owners'">
+            <div class="tab-content">
+                Content for Tab 2
+            </div>
+        </ng-container>
+    </div>
+</div>

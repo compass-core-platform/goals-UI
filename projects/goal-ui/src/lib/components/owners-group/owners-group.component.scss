@@ -1,0 +1,55 @@
+.group-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 2rem;
+
+    &__content {
+        padding: 20px;
+        justify-content: space-between;
+        display: flex;
+        background-color: #f0f8ff;
+    }
+
+    &__batch {
+        div {
+            margin-bottom: 10px;
+        }
+
+        div:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__members {
+        display: flex;
+        align-items: center;
+    }
+
+    &__rounded-name {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        margin-right: -0.5rem;
+        border: 1px solid black;
+        font-size: 10px;
+    }
+
+    &__extra-names {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 5px;
+        border: 1px solid black;
+    }
+}

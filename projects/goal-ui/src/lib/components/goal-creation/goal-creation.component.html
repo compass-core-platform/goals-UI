@@ -1,0 +1,85 @@
+<!-- <div class="m-4 goal-creation-parent">
+    <mat-tab-group animationDuration="0ms">
+        <mat-tab label="goal">
+            <lib-goal-objective></lib-goal-objective>
+        </mat-tab>
+        <mat-tab label="owner">
+            <div class="owner-tab-parent">
+                <label>New Owner</label>
+                <br><br>
+                <div class="input-field">
+                    <input type="text" name="ownername" placeholder="Enter Owner Name">
+                </div>
+                <br>
+                <div class="input-field">
+                    <input type="search" name="searchowner" placeholder="Search and add owners">
+                </div>
+                <br>
+                <div>
+                    <button class="btn btn-dark rounded-0">Create</button>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div> -->
+
+
+
+
+
+<!-- <div class="goals-objective-parent">
+    <div class="goals-objective-left mt-48">
+        <div>
+            <img src="assets/goals-ui.png" alt="Goals objective and key results">
+        </div>
+        <div class="left-content">
+            <p>Create your first Objective and Key Results to experience the power of OKRs!</p>
+            <button class="start-button" (click)="start()">Lets Start</button>
+        </div>
+    </div>
+    <div class="goals-objective-right mt-2">
+        <div>
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+        <div>
+            <h2>What are OKRs?</h2>
+            <p>OKRs are a powerful goal setting framework that helps individuals and teams set clear objectives  and measure their progress. Objective define what you want to achieve, and key results are the specific, measurable outcomes that track your success.</p>
+        </div>
+        <br><br>
+        <div>
+            <h2>How to use OKRs:</h2>
+            <ul>
+                <li><b>Set Objectives: </b>Define your big goals. What do you want to accomplish?</li>
+                <li><b>Create Key Results: </b>Specify how you'll measure progress toward each objective.</li>
+                <li><b>Track Progress: </b>Regularly update your key results to see how you're doing.</li>
+                <li><b>Achieve Success: </b>Reach your objectives and celebrate your achievements!</li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+<div class="goals-ui__wrapper">
+    <header class="goals-ui__header">
+         <div class="container ui goals-ui__tabs">
+              <span (click)="switchTabs('goal')" class="goals-ui__label" [ngClass]="{'active': category === 'goal'}">Goal</span>
+              <span (click)="switchTabs('owner')" class="goals-ui__label" [ngClass]="{'active': category === 'owner'}">Owner</span>
+         </div>
+     </header>
+     <ng-container *ngIf="category === 'goal'">
+        <lib-goals-list></lib-goals-list>
+     </ng-container>
+     <ng-container *ngIf="category === 'owner'">
+        <lib-owners-list></lib-owners-list>
+     </ng-container>
+</div>

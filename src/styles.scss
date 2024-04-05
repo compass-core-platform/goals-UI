@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'scss/mixins';
+@import 'scss/variables';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+    --primary-color: #0154D2;
+    --light-blue-color: #f0f8ff;
+    --white-color: #ffffff;
+    --black-color: #000000;
+}

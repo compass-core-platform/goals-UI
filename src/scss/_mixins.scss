@@ -1,0 +1,9 @@
+//Convert px to rem
+@function calculateRem($value) {
+    @return #{$value / 16}rem;
+}
+
+//border color
+@function dynamic-border($width, $color) {
+    @return $width + ' solid ' + $color;
+}
