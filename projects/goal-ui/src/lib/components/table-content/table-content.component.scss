@@ -13,7 +13,6 @@
 
     th, td {
         padding: 16px;
-        text-align: center;
         text-align: left;
     }
 
@@ -28,26 +27,20 @@
         background-color: var(--light-blue-color);
     }
     .owner-name {
-        display:  flex;
-        flex-direction: row;
-        align-items: center;
+        @include flexbox(flex, null, center, row);
         &__capitals {
-            padding: 8px;
-            background-color: #000000;
-            color: #ffffff;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 500;
-            text-transform: uppercase;
-            width: 35px;
-            text-align: center;
-            margin-right: 1rem;
+            padding: calculateRem(8);
+            background-color: var(--black-color);;
+            color: var(--white-color);;
+            border-radius: calculateRem(6);
+            width: calculateRem(35);
+            margin-right: calculateRem(16);
+            @include text-style(center, uppercase);
+            @include font-style(16px, null, 500);
         }
     }
     .goal-progress {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flexbox(flex, null, center, row);
         .mat-progress-bar  {
             margin-right: 1rem;
             height: 0.5rem;
@@ -62,29 +55,29 @@
       
       .rounded-name {
         display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-color: #ffffff;
-        color: #000000;
+        width: calculateRem(30);
+        height: calculateRem(30);
+        background-color: var(--white-color);
+        color: var(--black-color);;
         border-radius: 50%;
-        text-align: center;
-        line-height: 30px;
+        line-height: calculateRem(30);
         margin-right: -0.5rem;
-        border: 1px solid black;
-        font-size: 10px;
+        border:  dynamic-border(calculateRem(1),var(--black-color));
+        @include text-style(center, null);
+        @include font-style(10px, null, null);
       }
       
       .extra-names {
         display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-color: #ffffff;
-        color: #000000;
+        width: calculateRem(30);
+        height: calculateRem(30);
+        background-color: var(--white-color);
+        color: var(--black-color);
         border-radius: 50%;
-        text-align: center;
-        line-height: 30px;
+        line-height: calculateRem(30);
         margin-right: 5px;
-        border: 1px solid black;
+        border: dynamic-border(calculateRem(1),var(--black-color));
+        @include text-style(center, null);
       }
       
 }

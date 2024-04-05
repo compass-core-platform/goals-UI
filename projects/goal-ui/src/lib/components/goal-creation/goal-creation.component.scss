@@ -58,15 +58,14 @@
     }
     &__header{
         background: var(--white-color);
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(flex, space-between, null, null);
     }
     &__label{
-        display: inline-flex;
+        @include flexbox(inline-flex, space-between, null, null);
         padding: calculateRem(12) calculateRem(20);
         color: var(--black-color);
         &.active{
-            background: var(--black-color);
+            background: rgba(0, 0, 0, 0.04);
             font-weight: 600;
             border-bottom: dynamic-border(calculateRem(2),var(--primary-color));
         }
@@ -74,7 +73,7 @@
 
     &__search {
        ::ng-deep .mat-form-field-label{
-            padding:3px 20px;
+            padding:calculateRem(3) calculateRem(20);
         }
     }
 }

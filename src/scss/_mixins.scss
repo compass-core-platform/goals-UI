@@ -5,5 +5,47 @@
 
 //border color
 @function dynamic-border($width, $color) {
-    @return $width + ' solid ' + $color;
+    @return $width +' solid '+$color;
+}
+
+@mixin flexbox($display: null, $justify-content: null, $align-items: null, $flex-direction: null) {
+    @if $display !=null {
+        display: $display;
+    }
+
+    @if $justify-content !=null {
+        justify-content: $justify-content;
+    }
+
+    @if $align-items !=null {
+        align-items: $align-items;
+    }
+
+    @if $flex-direction !=null {
+        flex-direction: $flex-direction
+    }
+}
+
+@mixin font-style($font-size: null, $font-family: null, $font-weight: null) {
+    @if $font-size !=null {
+        font-size: $font-size;
+    }
+
+    @if $font-family !=null {
+        font-family: $font-family;
+    }
+
+    @if $font-weight !=null {
+        font-weight: $font-weight;
+    }
+}
+
+@mixin text-style($text-align: null, $text-transform: null) {
+    @if $text-align != null {
+        text-align: $text-align
+    }
+
+    @if $text-transform != null {
+        text-transform: $text-transform;
+    }
 }

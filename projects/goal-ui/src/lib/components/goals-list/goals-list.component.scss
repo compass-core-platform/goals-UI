@@ -1,9 +1,9 @@
+@import '../../../../../../src/styles';
+
 .goals-ui {
     &-section {
         &__header-filter {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            @include flexbox(flex, space-between, null, row);
         }
         &__title {
             opacity: 1;
@@ -16,13 +16,12 @@
             margin: 30px 0px;
         }
         &__search-box {
-            display: flex;
-            align-items: center;
             width: 300px;
-            border: 1px solid #ccc;
+            border: dynamic-border(calculateRem(1), var(--gray-80));
             padding: 5px;
             background: #ffffff;
             width: 30%;
+            @include flexbox(flex, null, center, null);
         }
     
         &__search-box input {
@@ -34,8 +33,7 @@
         }
 
         &__header-actions {
-            display: flex;
-            flex-direction: row;
+            @include flexbox(flex, null, null, row);
         }
 
         &__dropdown {
